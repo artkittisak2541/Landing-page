@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ที่ปรึกษาธุรกิจมืออาชีพ | วางกลยุทธ์เพื่อการเติบโตอย่างยั่งยืน</title>
+<meta name="description" content="บริการที่ปรึกษาธุรกิจ วิเคราะห์ วางกลยุทธ์ และแก้ปัญหาเชิงระบบ เพื่อการเติบโตอย่างมั่นคงและยั่งยืน">
+<meta name="keywords" content="ที่ปรึกษาธุรกิจ, business consultant, กลยุทธ์ธุรกิจ, วางแผนธุรกิจ">
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#1f2a44;
+  --accent:#c9a86a;
+  --bg:#f4f6fb;
+  --text:#333;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Kanit',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.75;
+}
+
+a{text-decoration:none}
+.container{max-width:1100px;margin:auto;padding:0 20px}
+
+/* ===== HERO ===== */
+.hero{
+  background:
+    linear-gradient(rgba(31,42,68,.88),rgba(31,42,68,.88)),
+    url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
+  color:#fff;
+  padding:130px 0;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.hero h1{
+  font-size:46px;
+  font-weight:600;
+}
+
+.hero h1 span{color:var(--accent)}
+
+.hero p{
+  margin:20px 0 35px;
+  font-size:18px;
+  max-width:520px;
+  color:#e4e9f4;
+}
+
+.btn{
+  display:inline-block;
+  padding:15px 36px;
+  border-radius:50px;
+  background:var(--accent);
+  color:#1f2a44;
+  font-weight:500;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+.hero-card{
+  background:rgba(255,255,255,.96);
+  border-radius:18px;
+  padding:35px;
+  color:#333;
+  box-shadow:0 25px 60px rgba(0,0,0,.25);
+}
+
+.hero-card h3{
+  color:var(--primary);
+  margin-bottom:15px;
+  font-size:22px;
+}
+
+.hero-card ul{list-style:none}
+.hero-card li{margin:10px 0}
+
+/* ===== SECTION ===== */
+section{padding:100px 0}
+
+.section-title{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.section-title h2{
+  font-size:36px;
+  color:var(--primary);
+}
+
+.section-title p{
+  margin-top:10px;
+  color:#666;
+}
+
+/* ===== FEATURES ===== */
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.feature{
+  background:#fff;
+  padding:35px;
+  border-radius:16px;
+  box-shadow:0 15px 35px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.feature:hover{
+  transform:translateY(-6px);
+}
+
+.feature h4{
+  color:var(--primary);
+  margin-bottom:10px;
+  font-size:20px;
+}
+
+/* ===== PROCESS ===== */
+.process{
+  background:
+    linear-gradient(rgba(255,255,255,.94),rgba(255,255,255,.94)),
+    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80")
+    center/cover;
+  padding:70px;
+  border-radius:20px;
+  max-width:900px;
+  margin:auto;
+  box-shadow:0 25px 60px rgba(0,0,0,.15);
+}
+
+.process p{
+  font-size:18px;
+  text-align:center;
+}
+
+/* ===== CTA ===== */
+.cta{
+  background:
+    linear-gradient(rgba(31,42,68,.9),rgba(31,42,68,.9)),
+    url("https://images.unsplash.com/photo-1523958203904-cdcb402031fd?auto=format&fit=crop&w=1600&q=80")
+    center/cover;
+  color:#fff;
+  text-align:center;
+  padding:100px 20px;
+}
+
+.cta h2{font-size:38px}
+.cta p{
+  margin:15px 0 35px;
+  color:#dbe2f1;
+  font-size:18px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#0f172a;
+  color:#9ca3af;
+  text-align:center;
+  padding:25px;
+  font-size:14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;text-align:center}
+  .hero p{margin-left:auto;margin-right:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>
+        ที่ปรึกษาธุรกิจ<br>
+        <span>เพื่อการเติบโตอย่างยั่งยืน</span>
+      </h1>
+      <p>
+        วิเคราะห์ วางกลยุทธ์ และแก้ปัญหาเชิงระบบ  
+        ด้วยมุมมองมืออาชีพที่เข้าใจธุรกิจจริง
+      </p>
+      <a href="https://line.me/ti/p/XXXX" class="btn">ปรึกษาฟรีทาง LINE</a>
+    </div>
+
+    <div class="hero-card">
+      <h3>บริการที่ให้คำปรึกษา</h3>
+      <ul>
+        <li>✔ กลยุทธ์ธุรกิจ & การเติบโต</li>
+        <li>✔ วิเคราะห์ปัญหาเชิงลึก</li>
+        <li>✔ ระบบงาน & กระบวนการ</li>
+        <li>✔ แผนระยะกลาง–ยาว</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>ทำไมธุรกิจเลือกเรา</h2>
+      <p>ที่ปรึกษาที่คิดเป็นระบบและโฟกัสผลลัพธ์จริง</p>
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <h4>มองภาพรวมทั้งองค์กร</h4>
+        <p>ไม่แก้ปัญหาเฉพาะจุด แต่จัดการเชิงโครงสร้าง</p>
+      </div>
+      <div class="feature">
+        <h4>ประสบการณ์จากธุรกิจจริง</h4>
+        <p>เข้าใจข้อจำกัดและความเป็นจริงของผู้ประกอบการ</p>
+      </div>
+      <div class="feature">
+        <h4>วัดผลได้และนำไปใช้ได้</h4>
+        <p>ทุกแนวทางออกแบบมาเพื่อใช้งานจริง</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>แนวทางการทำงาน</h2>
+      <p>กระบวนการให้คำปรึกษาอย่างเป็นระบบ</p>
+    </div>
+
+    <div class="process">
+      <p>
+        เริ่มจากการรับฟังและวิเคราะห์ปัญหาเชิงลึก  
+        วางกลยุทธ์ที่เหมาะสมกับบริบทของแต่ละธุรกิจ  
+        และติดตามผลอย่างต่อเนื่อง เพื่อการเติบโตที่มั่นคงและยั่งยืน
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>เริ่มต้นปรึกษาธุรกิจของคุณ</h2>
+  <p>พูดคุยเบื้องต้นได้ฟรี ไม่มีข้อผูกมัด</p>
+  <a href="https://line.me/ti/p/XXXX" class="btn">ติดต่อปรึกษา</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 ที่ปรึกษาธุรกิจ | All Rights Reserved
+</footer>
+
+</body>
+</html>
