@@ -1,276 +1,2267 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ที่ปรึกษาธุรกิจมืออาชีพ | วางกลยุทธ์เพื่อการเติบโตอย่างยั่งยืน</title>
+    <meta name="description" content="บริการที่ปรึกษาธุรกิจ วิเคราะห์ วางกลยุทธ์ และแก้ปัญหาเชิงระบบ เพื่อการเติบโตอย่างมั่นคงและยั่งยืน">
+    <meta name="keywords" content="ที่ปรึกษาธุรกิจ, business consultant, กลยุทธ์ธุรกิจ, วางแผนธุรกิจ">
+    <meta name="author" content="บริษัทที่ปรึกษาธุรกิจมืออาชีพ">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="ที่ปรึกษาธุรกิจมืออาชีพ | วางกลยุทธ์เพื่อการเติบโตอย่างยั่งยืน">
+    <meta property="og:description" content="บริการที่ปรึกษาธุรกิจ วิเคราะห์ วางกลยุทธ์ และแก้ปัญหาเชิงระบบ เพื่อการเติบโตอย่างมั่นคงและยั่งยืน">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0f1a2e;
+            --primary-dark: #0a1324;
+            --primary-light: #1a2b4d;
+            --accent: #d4af37;
+            --accent-light: #f4e4a6;
+            --accent-dark: #b8941f;
+            --bg: #f8fafc;
+            --bg-light: #ffffff;
+            --text: #2d3748;
+            --text-light: #718096;
+            --gradient-primary: linear-gradient(135deg, #0f1a2e 0%, #1a2b4d 100%);
+            --gradient-accent: linear-gradient(135deg, #d4af37 0%, #f7e08c 100%);
+            --gradient-dark: linear-gradient(135deg, #0a1324 0%, #0f1a2e 100%);
+            --shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 30px 80px rgba(0, 0, 0, 0.15);
+            --radius: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+        }
 
-<title>ที่ปรึกษาธุรกิจมืออาชีพ | วางกลยุทธ์เพื่อการเติบโตอย่างยั่งยืน</title>
-<meta name="description" content="บริการที่ปรึกษาธุรกิจ วิเคราะห์ วางกลยุทธ์ และแก้ปัญหาเชิงระบบ เพื่อการเติบโตอย่างมั่นคงและยั่งยืน">
-<meta name="keywords" content="ที่ปรึกษาธุรกิจ, business consultant, กลยุทธ์ธุรกิจ, วางแผนธุรกิจ">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+        html {
+            scroll-behavior: smooth;
+        }
 
-<style>
-:root{
-  --primary:#1f2a44;
-  --accent:#c9a86a;
-  --bg:#f4f6fb;
-  --text:#333;
-}
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            overflow-x: hidden;
+            position: relative;
+        }
 
-*{margin:0;padding:0;box-sizing:border-box}
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-body{
-  font-family:'Kanit',sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.75;
-}
+        .container-wide {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-a{text-decoration:none}
-.container{max-width:1100px;margin:auto;padding:0 20px}
+        /* ===== NAVIGATION ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(15, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
 
-/* ===== HERO ===== */
-.hero{
-  background:
-    linear-gradient(rgba(31,42,68,.88),rgba(31,42,68,.88)),
-    url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80")
-    center/cover no-repeat;
-  color:#fff;
-  padding:130px 0;
-}
+        .header.scrolled {
+            padding: 15px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
 
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.2fr 1fr;
-  gap:50px;
-  align-items:center;
-}
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-.hero h1{
-  font-size:46px;
-  font-weight:600;
-}
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
 
-.hero h1 span{color:var(--accent)}
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-accent);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 20px;
+            font-weight: 700;
+        }
 
-.hero p{
-  margin:20px 0 35px;
-  font-size:18px;
-  max-width:520px;
-  color:#e4e9f4;
-}
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+        }
 
-.btn{
-  display:inline-block;
-  padding:15px 36px;
-  border-radius:50px;
-  background:var(--accent);
-  color:#1f2a44;
-  font-weight:500;
-  transition:.3s;
-}
+        .logo-text span {
+            color: var(--accent);
+        }
 
-.btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 15px 40px rgba(0,0,0,.35);
-}
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
 
-.hero-card{
-  background:rgba(255,255,255,.96);
-  border-radius:18px;
-  padding:35px;
-  color:#333;
-  box-shadow:0 25px 60px rgba(0,0,0,.25);
-}
+        .nav-link {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+            position: relative;
+            padding: 8px 0;
+        }
 
-.hero-card h3{
-  color:var(--primary);
-  margin-bottom:15px;
-  font-size:22px;
-}
+        .nav-link:hover {
+            color: var(--accent);
+        }
 
-.hero-card ul{list-style:none}
-.hero-card li{margin:10px 0}
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-accent);
+            transition: width 0.3s;
+        }
 
-/* ===== SECTION ===== */
-section{padding:100px 0}
+        .nav-link:hover::after {
+            width: 100%;
+        }
 
-.section-title{
-  text-align:center;
-  margin-bottom:60px;
-}
+        .nav-cta {
+            background: var(--gradient-accent);
+            color: var(--primary);
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+        }
 
-.section-title h2{
-  font-size:36px;
-  color:var(--primary);
-}
+        .nav-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+        }
 
-.section-title p{
-  margin-top:10px;
-  color:#666;
-}
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
 
-/* ===== FEATURES ===== */
-.features{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
-}
+        /* ===== HERO SECTION ===== */
+        .hero {
+            position: relative;
+            background: var(--gradient-dark);
+            color: #fff;
+            padding: 180px 0 120px;
+            overflow: hidden;
+            margin-top: 80px;
+        }
 
-.feature{
-  background:#fff;
-  padding:35px;
-  border-radius:16px;
-  box-shadow:0 15px 35px rgba(0,0,0,.08);
-  transition:.3s;
-}
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(31, 41, 55, 0.2) 0%, transparent 50%),
+                url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover;
+            opacity: 0.3;
+            z-index: 1;
+        }
 
-.feature:hover{
-  transform:translateY(-6px);
-}
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
 
-.feature h4{
-  color:var(--primary);
-  margin-bottom:10px;
-  font-size:20px;
-}
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
 
-/* ===== PROCESS ===== */
-.process{
-  background:
-    linear-gradient(rgba(255,255,255,.94),rgba(255,255,255,.94)),
-    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80")
-    center/cover;
-  padding:70px;
-  border-radius:20px;
-  max-width:900px;
-  margin:auto;
-  box-shadow:0 25px 60px rgba(0,0,0,.15);
-}
+        .hero-content h1 {
+            font-size: 3.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
 
-.process p{
-  font-size:18px;
-  text-align:center;
-}
+        .hero-content h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 120px;
+            height: 5px;
+            background: var(--accent);
+            border-radius: 5px;
+        }
 
-/* ===== CTA ===== */
-.cta{
-  background:
-    linear-gradient(rgba(31,42,68,.9),rgba(31,42,68,.9)),
-    url("https://images.unsplash.com/photo-1523958203904-cdcb402031fd?auto=format&fit=crop&w=1600&q=80")
-    center/cover;
-  color:#fff;
-  text-align:center;
-  padding:100px 20px;
-}
+        .hero-content h1 span {
+            color: var(--accent);
+            position: relative;
+        }
 
-.cta h2{font-size:38px}
-.cta p{
-  margin:15px 0 35px;
-  color:#dbe2f1;
-  font-size:18px;
-}
+        .hero-content p {
+            font-size: 1.25rem;
+            color: #e2e8f0;
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
 
-/* ===== FOOTER ===== */
-footer{
-  background:#0f172a;
-  color:#9ca3af;
-  text-align:center;
-  padding:25px;
-  font-size:14px;
-}
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr;text-align:center}
-  .hero p{margin-left:auto;margin-right:auto}
-}
-</style>
+        .stat {
+            text-align: center;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        .stat:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 40px;
+            background: rgba(212, 175, 55, 0.3);
+        }
+
+        .stat h3 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .stat p {
+            font-size: 1rem;
+            color: #cbd5e0;
+            margin-bottom: 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--gradient-accent);
+            color: var(--primary);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.7s;
+            z-index: -1;
+        }
+
+        .btn-primary:hover::after {
+            left: 100%;
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            color: var(--text);
+            box-shadow: var(--shadow-xl);
+            transform: translateY(0);
+            transition: transform 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .hero-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background: var(--gradient-accent);
+        }
+
+        .hero-card h3 {
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .hero-card h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            height: 80%;
+            width: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .hero-card ul {
+            list-style: none;
+        }
+
+        .hero-card li {
+            margin: 18px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .hero-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* ===== SECTION STYLES ===== */
+        section {
+            padding: 120px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .title-decoration {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .title-decoration::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+
+        /* ===== FEATURES SECTION ===== */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .feature {
+            background: var(--bg-light);
+            padding: 45px 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            border: 1px solid rgba(212, 175, 55, 0.05);
+        }
+
+        .feature:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-accent);
+            z-index: 2;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            color: var(--accent);
+            font-size: 2rem;
+            box-shadow: 0 10px 20px rgba(15, 26, 46, 0.15);
+            transition: all 0.3s;
+        }
+
+        .feature:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+            background: var(--gradient-accent);
+            color: var(--primary);
+        }
+
+        .feature h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .feature p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+        }
+
+        /* ===== PROCESS SECTION ===== */
+        .process-section {
+            background: var(--gradient-primary);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 30%),
+                radial-gradient(circle at 90% 80%, rgba(31, 41, 55, 0.1) 0%, transparent 30%),
+                url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .process-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 0 20px;
+        }
+
+        .step-number {
+            width: 100px;
+            height: 100px;
+            background: var(--gradient-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--primary);
+            font-size: 2.5rem;
+            font-weight: 700;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-number::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.1);
+            z-index: -1;
+        }
+
+        .process-step h4 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .process-step p {
+            color: #cbd5e0;
+            padding: 0 10px;
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services-section {
+            background-color: #f9fafb;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-accent);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .service-card h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .service-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.3s;
+        }
+
+        .service-link:hover {
+            gap: 12px;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            background-color: var(--bg-light);
+        }
+
+        .testimonial-slider {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 50px;
+            box-shadow: var(--shadow);
+            margin: 20px;
+            position: relative;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 6rem;
+            color: var(--accent-light);
+            font-family: serif;
+            line-height: 1;
+            opacity: 0.5;
+        }
+
+        .testimonial-content {
+            font-size: 1.2rem;
+            color: var(--text);
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .author-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .author-info h5 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        /* ===== TEAM SECTION ===== */
+        .team-section {
+            background: var(--bg);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .member-image {
+            height: 250px;
+            background: var(--gradient-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .member-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                url('https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80') center/cover;
+            opacity: 0.7;
+        }
+
+        .team-member:nth-child(2) .member-image::before {
+            background-image: url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
+        }
+
+        .team-member:nth-child(3) .member-image::before {
+            background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1976&q=80');
+        }
+
+        .member-info {
+            padding: 30px;
+        }
+
+        .member-info h4 {
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 1.4rem;
+        }
+
+        .member-info .position {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .member-info p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta {
+            position: relative;
+            background: 
+                linear-gradient(rgba(15, 26, 46, 0.92), rgba(15, 26, 46, 0.92)),
+                url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1970&q=80')
+                center/cover;
+            color: white;
+            text-align: center;
+            padding: 140px 20px;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 70% 30%, rgba(212, 175, 55, 0.15) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .cta .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta h2 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .cta p {
+            font-size: 1.3rem;
+            color: #e2e8f0;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-5px);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--primary-dark);
+            color: #9ca3af;
+            padding: 80px 0 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+
+        .footer-logo h3 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo h3 span {
+            color: var(--accent);
+        }
+
+        .footer-logo p {
+            color: #cbd5e0;
+            margin-bottom: 25px;
+            max-width: 300px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #cbd5e0;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h4 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #cbd5e0;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .contact-info {
+            margin-top: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .contact-icon {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-top: 3px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #2d3748;
+            font-size: 0.95rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1100px) {
+            .hero-grid {
+                gap: 60px;
+            }
+            
+            .hero-content h1 {
+                font-size: 3.2rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+            
+            .hero-content h1::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .hero-stats {
+                justify-content: center;
+            }
+            
+            .stat:not(:last-child)::after {
+                display: none;
+            }
+            
+            .cta h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+            
+            .features, .services-grid, .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .testimonial {
+                padding: 30px;
+                margin: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .cta h2 {
+                font-size: 2rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== CUSTOM SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+        /* SUCCESS STORIES STYLES */
+    .success-stories {
+        background-color: var(--bg-light);
+        padding: 100px 0;
+    }
+
+    .success-metrics {
+        margin: 60px 0 80px;
+    }
+
+    .metric-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .metric-card {
+        background: white;
+        border-radius: var(--radius);
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        box-shadow: var(--shadow);
+        transition: transform 0.3s, box-shadow 0.3s;
+        border-left: 5px solid var(--accent);
+    }
+
+    .metric-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .metric-icon {
+        width: 70px;
+        height: 70px;
+        background: var(--gradient-primary);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent);
+        font-size: 1.8rem;
+        flex-shrink: 0;
+    }
+
+    .metric-content h3 {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 5px;
+        font-weight: 700;
+    }
+
+    .metric-content p {
+        color: var(--text-light);
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .case-studies {
+        margin: 80px 0;
+    }
+
+    .case-study-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .case-study-card {
+        background: white;
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: 1px solid rgba(212, 175, 55, 0.1);
+    }
+
+    .case-study-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .case-study-header {
+        background: var(--gradient-primary);
+        padding: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .company-logo {
+        width: 60px;
+        height: 60px;
+        background: white;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary);
+    }
+
+    .case-tag {
+        background: var(--accent);
+        color: var(--primary);
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .case-study-content {
+        padding: 30px;
+    }
+
+    .case-study-content h4 {
+        color: var(--primary);
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+    }
+
+    .case-result {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .result-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .result-label {
+        font-size: 0.9rem;
+        color: var(--text-light);
+        margin-bottom: 5px;
+    }
+
+    .result-value {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary);
+    }
+
+    .result-value.success {
+        color: #10b981;
+    }
+
+    .case-description {
+        color: var(--text);
+        line-height: 1.7;
+        margin-bottom: 25px;
+        font-style: italic;
+        position: relative;
+        padding-left: 20px;
+    }
+
+    .case-description::before {
+        content: '"';
+        position: absolute;
+        left: 0;
+        top: -10px;
+        font-size: 3rem;
+        color: var(--accent-light);
+        font-family: serif;
+        opacity: 0.5;
+    }
+
+    .case-author {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .author-info h5 {
+        color: var(--primary);
+        margin-bottom: 5px;
+        font-size: 1.1rem;
+    }
+
+    .author-info p {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    .trust-badges {
+        background: var(--gradient-primary);
+        border-radius: var(--radius-lg);
+        padding: 60px;
+        margin: 80px 0;
+        color: white;
+    }
+
+    .trust-title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .trust-title h3 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: white;
+    }
+
+    .trust-title p {
+        color: #cbd5e0;
+        font-size: 1.1rem;
+    }
+
+    .badge-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .trust-badge {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 25px;
+        border-radius: var(--radius);
+        border: 1px solid rgba(212, 175, 55, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .trust-badge:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .badge-icon {
+        width: 70px;
+        height: 70px;
+        background: var(--gradient-accent);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        font-size: 1.8rem;
+        flex-shrink: 0;
+    }
+
+    .badge-content h4 {
+        color: white;
+        margin-bottom: 8px;
+        font-size: 1.2rem;
+    }
+
+    .badge-content p {
+        color: #cbd5e0;
+        margin: 0;
+        font-size: 0.95rem;
+    }
+
+    .client-logos {
+        margin-top: 80px;
+    }
+
+    .logos-title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .logos-title h3 {
+        color: var(--primary);
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .logo-slider {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .logo-item {
+        background: white;
+        border-radius: var(--radius);
+        padding: 25px 40px;
+        box-shadow: var(--shadow);
+        transition: transform 0.3s;
+        border: 1px solid rgba(212, 175, 55, 0.1);
+    }
+
+    .logo-item:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .logo-text {
+        color: var(--primary);
+        font-size: 1.2rem;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    @media (max-width: 768px) {
+        .metric-grid,
+        .case-study-grid,
+        .badge-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .trust-badges {
+            padding: 40px 20px;
+        }
+        
+        .case-result {
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .logo-slider {
+            gap: 20px;
+        }
+        
+        .logo-item {
+            padding: 20px 30px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .metric-card,
+        .trust-badge {
+            flex-direction: column;
+            text-align: center;
+            gap: 15px;
+        }
+        
+        .case-study-header {
+            flex-direction: column;
+            gap: 15px;
+            text-align: center;
+        }
+    }
+    </style>
 </head>
 <body>
+    <!-- HEADER & NAVIGATION -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">B</div>
+                <div class="logo-text">ที่ปรึกษา<span>ธุรกิจ</span></div>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#home" class="nav-link">หน้าแรก</a>
+                <a href="#services" class="nav-link">บริการของเรา</a>
+                <a href="#process" class="nav-link">แนวทางการทำงาน</a>
+                <a href="#team" class="nav-link">ทีมงาน</a>
+                <a href="#testimonials" class="nav-link">เสียงตอบรับ</a>
+                <a href="#contact" class="nav-cta">ติดต่อเรา</a>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <h1>
-        ที่ปรึกษาธุรกิจ<br>
-        <span>เพื่อการเติบโตอย่างยั่งยืน</span>
-      </h1>
-      <p>
-        วิเคราะห์ วางกลยุทธ์ และแก้ปัญหาเชิงระบบ  
-        ด้วยมุมมองมืออาชีพที่เข้าใจธุรกิจจริง
-      </p>
-      <a href="https://line.me/ti/p/XXXX" class="btn">ปรึกษาฟรีทาง LINE</a>
-    </div>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content fade-in-up">
+                    <h1>
+                        ที่ปรึกษาธุรกิจ<br>
+                        <span>เพื่อการเติบโตอย่างยั่งยืน</span>
+                    </h1>
+                    <p>
+                        วิเคราะห์ วางกลยุทธ์ และแก้ปัญหาเชิงระบบ  
+                        ด้วยมุมมองมืออาชีพที่เข้าใจธุรกิจจริง
+                        พร้อมพาธุรกิจของคุณสู่ความสำเร็จอย่างมีแบบแผน
+                    </p>
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-comments"></i>ปรึกษาฟรีทาง LINE
+                    </a>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <h3>200+</h3>
+                            <p>ธุรกิจที่ปรึกษา</p>
+                        </div>
+                        <div class="stat">
+                            <h3>15+</h3>
+                            <p>ปีประสบการณ์</p>
+                        </div>
+                        <div class="stat">
+                            <h3>98%</h3>
+                            <p>ความพึงพอใจ</p>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="hero-card">
-      <h3>บริการที่ให้คำปรึกษา</h3>
-      <ul>
-        <li>✔ กลยุทธ์ธุรกิจ & การเติบโต</li>
-        <li>✔ วิเคราะห์ปัญหาเชิงลึก</li>
-        <li>✔ ระบบงาน & กระบวนการ</li>
-        <li>✔ แผนระยะกลาง–ยาว</li>
-      </ul>
+                <div class="hero-card floating">
+                    <h3>บริการที่ให้คำปรึกษา</h3>
+                    <ul>
+                        <li>กลยุทธ์ธุรกิจ & การเติบโต</li>
+                        <li>วิเคราะห์ปัญหาเชิงลึก</li>
+                        <li>ระบบงาน & กระบวนการ</li>
+                        <li>แผนระยะกลาง–ยาว</li>
+                        <li>เพิ่มประสิทธิภาพองค์กร</li>
+                        <li>การตลาดแบบครบวงจร</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section id="features">
+        <div class="container">
+            <div class="section-title">
+                <div class="title-decoration">
+                    <h2>ทำไมธุรกิจเลือกเรา</h2>
+                </div>
+                <p>ที่ปรึกษาที่คิดเป็นระบบและโฟกัสผลลัพธ์จริง เพื่อความสำเร็จที่วัดได้</p>
+            </div>
+
+            <div class="features">
+                <div class="feature fade-in-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-chess-board"></i>
+                    </div>
+                    <h4>มองภาพรวมทั้งองค์กร</h4>
+                    <p>ไม่แก้ปัญหาเฉพาะจุด แต่จัดการเชิงโครงสร้างเพื่อความยั่งยืน</p>
+                </div>
+                <div class="feature fade-in-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>ประสบการณ์จากธุรกิจจริง</h4>
+                    <p>เข้าใจข้อจำกัดและความเป็นจริงของผู้ประกอบการอย่างลึกซึ้ง</p>
+                </div>
+                <div class="feature fade-in-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h4>วัดผลได้และนำไปใช้ได้</h4>
+                    <p>ทุกแนวทางออกแบบมาเพื่อใช้งานจริง และติดตามผลได้อย่างชัดเจน</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <div class="title-decoration">
+                    <h2>บริการของเรา</h2>
+                </div>
+                <p>บริการที่ปรึกษาธุรกิจครบวงจร เพื่อตอบโจทย์ทุกความต้องการ</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h4>กลยุทธ์ธุรกิจ</h4>
+                    <p>วางแผนกลยุทธ์เพื่อการเติบโตอย่างยั่งยืน วิเคราะห์ตลาดและคู่แข่ง</p>
+                
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h4>วิเคราะห์ทางการเงิน</h4>
+                    <p>ตรวจสอบสุขภาพทางการเงินและวางแผนบริหารจัดการเงินทุน</p>
+                    
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h4>เพิ่มประสิทธิภาพองค์กร</h4>
+                    <p>ปรับปรุงกระบวนการทำงานและระบบบริหารภายในองค์กร</p>
+                    
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>พัฒนาทีมงาน</h4>
+                    <p>ฝึกอบรมและพัฒนาทักษะทีมงานเพื่อเพิ่มผลผลิตในการทำงาน</p>
+                    
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h4>วางแผนการเติบโต</h4>
+                    <p>วางแผนขยายธุรกิจทั้งในและต่างประเทศอย่างเป็นระบบ</p>
+                    
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>บริหารความเสี่ยง</h4>
+                    <p>ประเมินและบริหารความเสี่ยงทางธุรกิจอย่างครอบคลุม</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="process-section" id="process">
+        <div class="process-bg"></div>
+        <div class="container process-container">
+            <div class="section-title">
+                <div class="title-decoration">
+                    <h2 style="color: white;">แนวทางการทำงาน</h2>
+                </div>
+                <p style="color: #cbd5e0;">กระบวนการให้คำปรึกษาอย่างเป็นระบบแบบมืออาชีพ</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step fade-in-up">
+                    <div class="step-number">1</div>
+                    <h4>วิเคราะห์ปัญหา</h4>
+                    <p>สำรวจธุรกิจเชิงลึกเพื่อระบุจุดแข็ง จุดอ่อน และโอกาส</p>
+                </div>
+                <div class="process-step fade-in-up">
+                    <div class="step-number">2</div>
+                    <h4>วางกลยุทธ์</h4>
+                    <p>ออกแบบแผนการดำเนินงานที่เหมาะสมกับธุรกิจของคุณ</p>
+                </div>
+                <div class="process-step fade-in-up">
+                    <div class="step-number">3</div>
+                    <h4>ดำเนินการ</h4>
+                    <p>ช่วยเหลือในการปฏิบัติตามแผนอย่างเป็นขั้นตอน</p>
+                </div>
+                <div class="process-step fade-in-up">
+                    <div class="step-number">4</div>
+                    <h4>ติดตามผล</h4>
+                    <p>ประเมินผลและปรับปรุงเพื่อให้บรรลุเป้าหมาย</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="team-section" id="team">
+        <div class="container">
+            <div class="section-title">
+                <div class="title-decoration">
+                    <h2>ทีมงานผู้เชี่ยวชาญ</h2>
+                </div>
+                <p>ทีมที่ปรึกษามืออาชีพที่มีประสบการณ์หลากหลายอุตสาหกรรม</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-member fade-in-up">
+                    <div class="member-image"></div>
+                    <div class="member-info">
+                        <h4>ดร.สมชาย เกษมสันต์</h4>
+                        <span class="position">ที่ปรึกษากลยุทธ์อาวุโส</span>
+                        <p>ปรึกษาด้านธุรกิจมากว่า 20 ปี เคยดำรงตำแหน่ง CEO บริษัทระดับประเทศ</p>
+                    </div>
+                </div>
+                
+                <div class="team-member fade-in-up">
+                    <div class="member-image"></div>
+                    <div class="member-info">
+                        <h4>คุณสุนิสา วิวัฒน์ธนาดล</h4>
+                        <span class="position">ที่ปรึกษาด้านการเงิน</span>
+                        <p>เชี่ยวชาญด้านการเงินและการลงทุน มีประสบการณ์ในแวดวงการเงินกว่า 15 ปี</p>
+                    </div>
+                </div>
+                
+                <div class="team-member fade-in-up">
+                    <div class="member-image"></div>
+                    <div class="member-info">
+                        <h4>คุณธนวัฒน์ พิพัฒน์ธนากุล</h4>
+                        <span class="position">ที่ปรึกษาด้านการตลาด</span>
+                        <p>ผู้เชี่ยวชาญด้านการตลาดดิจิทัลและการสร้างแบรนด์ ปรึกษาธุรกิจมากกว่า 200 ราย</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS STORIES SECTION -->
+<section class="success-stories" id="success-stories">
+    <div class="container">
+        <div class="section-title">
+            <div class="title-decoration">
+                <h2>ความสำเร็จที่สร้างสรรค์ร่วมกัน</h2>
+            </div>
+            <p>ธุรกิจกว่า 200 ราย ที่เติบโตอย่างก้าวกระโดดจากการปรึกษาแบบมืออาชีพ</p>
+        </div>
+
+        <div class="success-metrics">
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>40%</h3>
+                        <p>เพิ่มรายได้เฉลี่ย ภายใน 6 เดือน</p>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-business-time"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>85%</h3>
+                        <p>ลดต้นทุนการดำเนินงานอย่างมีประสิทธิภาพ</p>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>98%</h3>
+                        <p>ลูกค้าพึงพอใจกับผลลัพธ์ที่ได้รับ</p>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>150+</h3>
+                        <p>ธุรกิจที่ขยายสาขาได้สำเร็จ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-studies">
+            <div class="case-study-grid">
+                <div class="case-study-card fade-in-up">
+                    <div class="case-study-header">
+                        <div class="company-logo">TS</div>
+                        <div class="case-tag">เทคโนโลยี</div>
+                    </div>
+                    <div class="case-study-content">
+                        <h4>TechSolutions Co., Ltd.</h4>
+                        <div class="case-result">
+                            <div class="result-item">
+                                <span class="result-label">เพิ่มรายได้</span>
+                                <span class="result-value success">+40%</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">ระยะเวลา</span>
+                                <span class="result-value">6 เดือน</span>
+                            </div>
+                        </div>
+                        <p class="case-description">
+                            "จากปัญหาการจัดการทีมและการวางกลยุทธ์ที่ไม่ชัดเจน 
+                            ทำให้ธุรกิจเติบโตช้า หลังจากการปรึกษาและปรับระบบการทำงาน 
+                            สามารถเพิ่มประสิทธิภาพทีมได้ 60% และเพิ่มรายได้ 40% ภายใน 6 เดือน"
+                        </p>
+                        <div class="case-author">
+                            <div class="author-info">
+                                <h5>คุณกฤตน์ วิศวกร</h5>
+                                <p>ผู้ก่อตั้ง TechSolutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-study-card fade-in-up">
+                    <div class="case-study-header">
+                        <div class="company-logo">GF</div>
+                        <div class="case-tag">อาหารและเครื่องดื่ม</div>
+                    </div>
+                    <div class="case-study-content">
+                        <h4>GreenFarm Organic Cafe</h4>
+                        <div class="case-result">
+                            <div class="result-item">
+                                <span class="result-label">เพิ่มลูกค้า</span>
+                                <span class="result-value success">+150%</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">ระยะเวลา</span>
+                                <span class="result-value">4 เดือน</span>
+                            </div>
+                        </div>
+                        <p class="case-description">
+                            "ร้านกาแฟออร์แกนิคที่ขาดจุดเด่นในตลาดที่มีการแข่งขันสูง 
+                            หลังจากการปรึกษาด้านการตลาดและการสร้างแบรนด์ 
+                            สามารถเพิ่มฐานลูกค้าได้ 150% และเปิดสาขาใหม่ได้สำเร็จ"
+                        </p>
+                        <div class="case-author">
+                            <div class="author-info">
+                                <h5>คุณสมหญิง จิรกุล</h5>
+                                <p>เจ้าของ GreenFarm Organic Cafe</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-study-card fade-in-up">
+                    <div class="case-study-header">
+                        <div class="company-logo">LS</div>
+                        <div class="case-tag">โลจิสติกส์</div>
+                    </div>
+                    <div class="case-study-content">
+                        <h4>LogisticSpeed Express</h4>
+                        <div class="case-result">
+                            <div class="result-item">
+                                <span class="result-label">ลดต้นทุน</span>
+                                <span class="result-value success">-35%</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">ระยะเวลา</span>
+                                <span class="result-value">8 เดือน</span>
+                            </div>
+                        </div>
+                        <p class="case-description">
+                            "บริษัทโลจิสติกส์ที่มีปัญหาด้านประสิทธิภาพการขนส่งและต้นทุนสูง 
+                            หลังจากการวิเคราะห์ระบบและปรับปรุงกระบวนการ 
+                            สามารถลดต้นทุนการดำเนินงานได้ 35% และเพิ่มความพึงพอใจลูกค้า"
+                        </p>
+                        <div class="case-author">
+                            <div class="author-info">
+                                <h5>คุณวิศวะ พงศ์ธร</h5>
+                                <p>กรรมการผู้จัดการ LogisticSpeed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="trust-badges">
+            <div class="trust-title">
+                <h3>ได้รับการยอมรับจากองค์กรชั้นนำ</h3>
+                <p>พันธมิตรและองค์กรที่ไว้วางใจให้เราช่วยพัฒนาธุรกิจ</p>
+            </div>
+            <div class="badge-grid">
+                <div class="trust-badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="badge-content">
+                        <h4>ที่ปรึกษาดีเด่น</h4>
+                        <p>ได้รับรางวัลจากสมาคมธุรกิจไทย</p>
+                    </div>
+                </div>
+                <div class="trust-badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="badge-content">
+                        <h4>พันธมิตรระดับประเทศ</h4>
+                        <p>ร่วมงานกับองค์กรธุรกิจกว่า 50 แห่ง</p>
+                    </div>
+                </div>
+                <div class="trust-badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="badge-content">
+                        <h4>ทีมงานระดับมืออาชีพ</h4>
+                        <p>ทุกคนมีประสบการณ์ 10+ ปี</p>
+                    </div>
+                </div>
+                <div class="trust-badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="badge-content">
+                        <h4>ข้อมูลความปลอดภัย</h4>
+                        <p>รักษาความลับธุรกิจอย่างเคร่งครัด</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="client-logos">
+            <div class="logos-title">
+                <h3>ลูกค้าที่ไว้วางใจเรา</h3>
+            </div>
+            <div class="logo-slider">
+                <div class="logo-item">
+                    <div class="logo-text">TechSolutions</div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-text">GreenFarm</div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-text">LogisticSpeed</div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-text">ThaiBiz</div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-text">GlobalTrade</div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
-<!-- FEATURES -->
-<section>
-  <div class="container">
-    <div class="section-title">
-      <h2>ทำไมธุรกิจเลือกเรา</h2>
-      <p>ที่ปรึกษาที่คิดเป็นระบบและโฟกัสผลลัพธ์จริง</p>
-    </div>
+    <!-- CTA SECTION -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <h2 class="fade-in-up">เริ่มต้นปรึกษาธุรกิจของคุณวันนี้</h2>
+            <p class="fade-in-up">พูดคุยเบื้องต้นได้ฟรี ไม่มีข้อผูกมัด พร้อมวิเคราะห์โอกาสธุรกิจเบื้องต้นให้ฟรี</p>
+            
+            <div class="cta-buttons fade-in-up">
+                <a href="https://line.me/ti/p/XXXX" class="btn btn-primary">
+                    <i class="fab fa-line"></i>ติดต่อทาง LINE
+                </a>
+                <a href="tel:+6621234567" class="btn btn-secondary">
+                    <i class="fas fa-phone-alt"></i>โทรหาพวกเรา
+                </a>
+                <a href="mailto:consult@business.com" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i>ส่งอีเมล
+                </a>
+            </div>
+        </div>
+    </section>
 
-    <div class="features">
-      <div class="feature">
-        <h4>มองภาพรวมทั้งองค์กร</h4>
-        <p>ไม่แก้ปัญหาเฉพาะจุด แต่จัดการเชิงโครงสร้าง</p>
-      </div>
-      <div class="feature">
-        <h4>ประสบการณ์จากธุรกิจจริง</h4>
-        <p>เข้าใจข้อจำกัดและความเป็นจริงของผู้ประกอบการ</p>
-      </div>
-      <div class="feature">
-        <h4>วัดผลได้และนำไปใช้ได้</h4>
-        <p>ทุกแนวทางออกแบบมาเพื่อใช้งานจริง</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-bg"></div>
+        <div class="container-wide">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <h3>ที่ปรึกษา<span>ธุรกิจ</span></h3>
+                        <p>ให้คำปรึกษาด้านธุรกิจแบบครบวงจร เพื่อนำพาธุรกิจสู่ความสำเร็จอย่างยั่งยืน</p>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-line"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <div class="footer-links">
+                        <h4>ลิงก์ด่วน</h4>
+                        <ul>
+                            <li><a href="#home"><i class="fas fa-chevron-right"></i>หน้าแรก</a></li>
+                            <li><a href="#services"><i class="fas fa-chevron-right"></i>บริการของเรา</a></li>
+                            <li><a href="#process"><i class="fas fa-chevron-right"></i>แนวทางการทำงาน</a></li>
+                            <li><a href="#team"><i class="fas fa-chevron-right"></i>ทีมงาน</a></li>
+                            <li><a href="#testimonials"><i class="fas fa-chevron-right"></i>เสียงตอบรับ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <div class="footer-links">
+                        <h4>บริการของเรา</h4>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i>ที่ปรึกษากลยุทธ์ธุรกิจ</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i>เพิ่มประสิทธิภาพองค์กร</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i>วางแผนการตลาด</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i>วิเคราะห์ทางการเงิน</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i>บริหารความเสี่ยง</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <div class="footer-links">
+                        <h4>ติดต่อเรา</h4>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <p>ชั้น 12 อาคารธุรกิจ ถนนสีลม<br>กรุงเทพมหานคร 10500</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <p><a href="tel:+6621234567">+66 2 123 4567</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p><a href="mailto:consult@business.com">consult@business.com</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fab fa-line"></i>
+                                </div>
+                                <div>
+                                    <p><a href="https://line.me/ti/p/XXXX">@businessconsult</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ที่ปรึกษาธุรกิจมืออาชีพ | All Rights Reserved</p>
+                <p>ออกแบบและพัฒนาด้วยความตั้งใจเพื่อธุรกิจไทย</p>
+            </div>
+        </div>
+    </footer>
 
-<!-- PROCESS -->
-<section>
-  <div class="container">
-    <div class="section-title">
-      <h2>แนวทางการทำงาน</h2>
-      <p>กระบวนการให้คำปรึกษาอย่างเป็นระบบ</p>
-    </div>
-
-    <div class="process">
-      <p>
-        เริ่มจากการรับฟังและวิเคราะห์ปัญหาเชิงลึก  
-        วางกลยุทธ์ที่เหมาะสมกับบริบทของแต่ละธุรกิจ  
-        และติดตามผลอย่างต่อเนื่อง เพื่อการเติบโตที่มั่นคงและยั่งยืน
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-  <h2>เริ่มต้นปรึกษาธุรกิจของคุณ</h2>
-  <p>พูดคุยเบื้องต้นได้ฟรี ไม่มีข้อผูกมัด</p>
-  <a href="https://line.me/ti/p/XXXX" class="btn">ติดต่อปรึกษา</a>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  © 2025 ที่ปรึกษาธุรกิจ | All Rights Reserved
-</footer>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.getElementById('header');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.querySelector('.nav-links');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+                if (navLinks.style.display === 'flex') {
+                    navLinks.style.position = 'absolute';
+                    navLinks.style.top = '100%';
+                    navLinks.style.left = '0';
+                    navLinks.style.width = '100%';
+                    navLinks.style.backgroundColor = 'var(--primary)';
+                    navLinks.style.flexDirection = 'column';
+                    navLinks.style.padding = '30px';
+                    navLinks.style.gap = '25px';
+                    navLinks.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)';
+                }
+            });
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.feature, .process-step, .testimonial, .service-card, .team-member').forEach(el => {
+                observer.observe(el);
+            });
+            
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                        
+                        if (window.innerWidth <= 992) {
+                            navLinks.style.display = 'none';
+                        }
+                    }
+                });
+            });
+            
+            const fadeElements = document.querySelectorAll('.fade-in-up');
+            fadeElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            });
+            
+            setTimeout(() => {
+                fadeElements.forEach(el => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                });
+            }, 300);
+            
+            const today = new Date();
+            const yearElement = document.querySelector('.footer-bottom p');
+            if (yearElement) {
+                yearElement.innerHTML = yearElement.innerHTML.replace('2025', today.getFullYear());
+            }
+        });
+        // เพิ่มเอฟเฟกต์การแสดงผลแบบต่อเนื่อง
+    document.addEventListener('DOMContentLoaded', function() {
+        // Animate metrics counter
+        const metrics = document.querySelectorAll('.metric-content h3');
+        metrics.forEach(metric => {
+            const target = parseInt(metric.textContent);
+            metric.textContent = '0';
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(metric, target);
+                        observer.unobserve(metric);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            observer.observe(metric);
+        });
+        
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + (element.textContent.includes('%') ? '%' : '+');
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current) + (element.textContent.includes('%') ? '%' : '+');
+                }
+            }, 30);
+        }
+        
+        // Add hover effects to case studies
+        const caseCards = document.querySelectorAll('.case-study-card');
+        caseCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+        
+        // Add scroll animation for trust badges
+        const badges = document.querySelectorAll('.trust-badge');
+        const badgeObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        badges.forEach(badge => {
+            badge.style.opacity = '0';
+            badge.style.transform = 'translateY(20px)';
+            badge.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            badgeObserver.observe(badge);
+        });
+    });
+    </script>
 </body>
 </html>
